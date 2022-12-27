@@ -1,0 +1,80 @@
+https://stackoverflow.com/questions/56220392/kubectl-unable-to-connect-to-the-server-dial-tcp-192-168-214-1366443-conne
+
+https://stackoverflow.com/questions/72504257/i-encountered-when-executing-kubeadm-init-error-issue
+
+https://stackoverflow.com/questions/47676980/curl-60-peers-certificate-issuer-is-not-recognized
+
+https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-apache-for-centos-7
+
+https://stackoverflow.com/questions/55571566/unable-to-bring-up-kubernetes-api-server
+
+
+curl -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+   chmod 700 get_helm.sh
+  ./get_helm.sh
+  helm plugin install https://github.com/databus23/helm-diff
+  helm plugin install https://github.com/aslafy-z/helm-git
+  helm plugin install https://github.com/futuresimple/helm-secrets
+  https://github.com/roboll/helmfile/releases/download/v${HELMFILE_VERSION}/helmfile_linux_amd64 /usr/local/bin/helmfile
+  chmod 755 /usr/local/bin/helmfile
+  sudo su -
+  helmfile -f infra/ingress-controller/helmfile-ingress-nginx.yaml sync
+  sudo su -
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  echo $(id -u)
+  echo $(id -g)
+  sudo cat $HOME/.kube/config
+  curl https://192.168.0.9:6443
+  kubeadm token list
+  sudo openssl x509 -in test.cer -inform der -outform pem -out test.pem
+  sudo yum install ca-certificates
+  sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+  sudo yum install mod_ssl
+  sudo mkdir /etc/ssl/private
+  sudo chmod 700 /etc/ssl/private
+  sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+  curl https://192.168.0.9:6443
+  curl https://192.168.0.9:6443 -k
+  kubeadm init
+  sudo kubeadm init
+  curl https://192.168.0.9:8443
+  sudo cat ~/.kube/config
+  curl https://192.168.0.9:6443
+  sudo update-ca-trust force-enable
+  sudo cp /etc/ssl/certs/apache-selfsigned.crt /etc/pki/ca-trust/source/anchors/
+  update-ca-trust extract
+  sudo update-ca-trust extract
+  curl https://192.168.0.9:6443
+  curl https://192.168.0.9:6443 -k
+  sudo ssh 192.168.0.9
+  sudo su -
+  ssh 192.168.0.9
+  sudo vi /etc/ssh/sshd_config
+  sudo systemctl restart sshd
+  sudo ssh 192.168.0.9
+  chmod 700 /home/centos
+  cd .ssh
+  ls -ld .
+  ls -ld authorized_keys
+  ssh 192.168.0.9
+  ssh-keygen -t rsa -b 2048
+  ssh-copy-id -i id_rsa.pub centos@192.168.0.9
+  cd
+  sudo kubectl apply -f infra/storage/cinder-csi.yaml
+  kubeadm init --apiserver-advertise-address=192.168.0.9 --ignore-preflight-errors=all
+  sudo kubeadm init --apiserver-advertise-address=192.168.0.9 --ignore-preflight-errors=all
+  sudo kubeadm join 192.168.0.9:6443 --token xxxxxx     --discovery-token-ca-cert-hash xxxxx
+  sudo systemctl status kubelet
+  sudo cd /var/log/containers
+  ls -l
+  pwd   
+  cd /var/log/containers
+  ls -ldrt *
+  tail -f kube-apiserver-testing.novalocal_kube-system_kube-apiserver-8aa6e81d7ffe286c1ab358702c8ff4ff599d681911b8740c54873184a6ea4ffc.log
+  sudo tail -f kube-apiserver-testing.novalocal_kube-system_kube-apiserver-8aa6e81d7ffe286c1ab358702c8ff4ff599d681911b8740c54873184a6ea4ffc.log
+  curl 192.168.0.9
+  curl 192.168.0.9:6443
+  kubectl get po -o wide
